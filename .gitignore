@@ -1,0 +1,7 @@
+
+*.log
+*.sqlite3
+*.cache
+*.pid
+*.txt
+.sass-cache/377397e77410b967ca07766b6b21d366f0320a14/(__TEMPLATE__)c

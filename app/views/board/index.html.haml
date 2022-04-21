@@ -1,21 +1,25 @@
-:coffeescript
-  aws_wss = "ws://162.243.120.86:3010"
+:javascript
+  var aws_wss = "ws://162.243.120.86:3010";
   window.socket = undefined;
-  
-  window.make_circle = (remote_id)->
-    return new paper.Path.Circle
-      radius: 50
-      fillColor: "red"
-      position: paper.view.center
+
+  window.make_circle = function(remote_id) {
+    return new paper.Path.Circle({
+      radius: 50,
+      fillColor: "red",
+      position: paper.view.center,
       remote_id: remote_id
-  $ ->
-    window.gui = new dat.GUI()
-    window.app = new PaperJSApp
-      canvas: $('canvas')
+    });
+  };
+
+  $(function() {
+    window.app = new PaperJSApp({
+      canvas: $('canvas'),
       name: "MassControl"
-    alertify.set('notifier','position', 'bottom-left')
-    
-    # YOUR CODE HERE
+    });
+    alertify.set('notifier', 'position', 'bottom-left');
+    make_circle()
+  });
+
 
     
 / DO NOT MODIFY CODE UNDER THIS LINE      

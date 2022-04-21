@@ -1,13 +1,12 @@
-:coffeescript
-  aws_wss = "ws://162.243.120.86:3010"
+:javascript
+  var aws_wss = "ws://162.243.120.86:3010"
   window.socket = undefined;
   
-  $ ->
-    alertify.notify "Hello World"
-    $("form").submit (event)->
-      event.preventDefault()
-    # YOUR CODE HERE
-    
+  $(function(){
+    alertify.notify("Hello World")
+    $("form").submit(function(event){event.preventDefault()});
+    //YOUR CODE HERE
+  })
 / DO NOT MODIFY CODE BELOW THIS LINE
 .mobile
   .hero
